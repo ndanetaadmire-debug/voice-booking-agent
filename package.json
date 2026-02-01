@@ -1,0 +1,39 @@
+{
+  "name": "voice-booking-agent",
+  "version": "1.0.0",
+  "description": "Phone booking agent for salons and clinics: Twilio voice webhooks, slot-filling dialogue state machine, spoken date/time parsing, low-confidence recovery, DTMF fallback and human handoff.",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "ci": "npm run typecheck && npm test -- --coverage && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndanetaadmire-debug/voice-booking-agent.git"
+  },
+  "author": "Admire T. Ndaneta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndanetaadmire-debug/voice-booking-agent/issues"
+  },
+  "homepage": "https://github.com/ndanetaadmire-debug/voice-booking-agent#readme",
+  "dependencies": {
+    "@fastify/formbody": "^9.0.1",
+    "fastify": "^5.12.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  }
+}
